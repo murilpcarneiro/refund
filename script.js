@@ -142,3 +142,17 @@ function updateTotals() {
     console.error('Erro ao atualizar totais:', error)
   }
 }
+
+// Evento que captura o clique nos itens da lista
+expenseList.addEventListener('click', (e) => {
+  // Verifica se o clique foi no ícone de remover
+  if (e.target.classList.contains('remove-icon')) {
+    // Obtem a li do pai do elemento clicado
+    const item = e.target.closest('.expense')
+
+    // Remove o item da lista
+    item.remove()
+    // Atualiza os totais
+    updateTotals()
+  }
+})
