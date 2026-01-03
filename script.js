@@ -95,6 +95,9 @@ function addExpense(expense) {
 
     // Adiciona o item na lista
     expenseList.append(expenseItem)
+
+    // Reseta o formulário
+    resetForm()
   } catch (error) {
     alert('Erro ao adicionar despesa. Tente novamente.')
     console.error('Erro ao adicionar despesa:', error)
@@ -156,3 +159,9 @@ expenseList.addEventListener('click', (e) => {
     updateTotals()
   }
 })
+
+function resetForm() {
+  expense.value = ''
+  category.value = ''
+  amount.value = ''
+}
