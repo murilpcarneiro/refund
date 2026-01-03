@@ -161,7 +161,11 @@ expenseList.addEventListener('click', (e) => {
 })
 
 function resetForm() {
+  // Limpa os valores dos campos
   expense.value = ''
   category.value = ''
   amount.value = ''
+
+  // Foca no campo de despesa
+  expense.focus()
 }
